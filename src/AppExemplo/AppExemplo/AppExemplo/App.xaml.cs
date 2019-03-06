@@ -3,6 +3,9 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using AppExemplo.Services;
 using AppExemplo.Views;
+using Plugin.Settings;
+using Plugin.Settings.Abstractions;
+
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace AppExemplo
@@ -22,7 +25,11 @@ namespace AppExemplo
             else
                 DependencyService.Register<AzureDataStore>();
 
+            CrossSettings.Current.AddOrUpdateValue("IP", "10.1.1.14");
+            var ip = CrossSettings.Current.GetValueOrDefault("IP","ip");
+
             MainPage = new MainPage();
+
         }
 
         protected override void OnStart()

@@ -14,8 +14,9 @@
         </ToolbarItem>
     </ContentPage.ToolbarItems>
 
-    <StackLayout>
-        <ListView x:Name="ItemsListView"
+    <StackLayout >
+        <Picker Title="Selecione aqui "  x:Name="ItemsListView" ItemsSource="{Binding Items}"></Picker>
+        <!--<ListView x:Name="ItemsListView"
                 ItemsSource="{Binding Items}"
                 VerticalOptions="FillAndExpand"
                 HasUnevenRows="true"
@@ -40,6 +41,6 @@
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-        </ListView>
+        </ListView>-->
     </StackLayout>
 </ContentPage>
