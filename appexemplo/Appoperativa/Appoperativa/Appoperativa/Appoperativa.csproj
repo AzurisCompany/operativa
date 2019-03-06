@@ -10,10 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="sqlite-net-standard" Version="1.5.1" />
     <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\DatabaseLibORM\DatabaseLibORM.csproj" />
     <ProjectReference Include="..\..\DatabaseLib\DatabaseLib.csproj" />
   </ItemGroup>
 </Project>

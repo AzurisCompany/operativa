@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using DatabaseLib.IServices;
 using DatabaseLib.Model;
+using DatabaseLibORM.Model;
 using Xamarin.Forms;
 
 namespace Appoperativa
@@ -19,12 +21,23 @@ namespace Appoperativa
         private void BntCadastro_OnClicked(object sender, EventArgs e)
         {
            Produto p = new Produto();
-            p.Id = eId.Text;
+            p.Id = Convert.ToInt32( eId.Text);
             p.Descricao = eDescricao.Text;
             p.Nome = eNome.Text;
 
             var db = DependencyService.Get<IDatabase>();
             db.Inserir(p);
+
+
+            ProdutoORM pORM = new ProdutoORM();
+            pORM.Id = Convert.ToInt32(eId.Text);
+            pORM.Descricao = eDescricao.Text;
+            pORM.Nome = eNome.Text;
+
+            var dbORM = new DatabaseLibORM.Service.DatabaseOrm();
+            dbORM.Inserir(pORM);
+
+
 
         }
     }

@@ -2,6 +2,7 @@
 using DatabaseLib.IServices;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using DatabaseLibORM.Model;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Appoperativa
@@ -21,6 +22,10 @@ namespace Appoperativa
             // Criacao do banco 
             var db = DependencyService.Get<IDatabase>();
            db.CriarBanco();
+
+            var dbOrm = new DatabaseLibORM.Service.DatabaseOrm();
+            dbOrm.CriarBanco();
+           
 
 
         }
