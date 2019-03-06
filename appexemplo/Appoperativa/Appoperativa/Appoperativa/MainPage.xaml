@@ -6,7 +6,11 @@
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Button x:Name="BntCadastro" Text="Cadastra" ></Button>
+        <Entry x:Name="eId"></Entry>
+        <Entry x:Name="eNome"></Entry>
+        <Entry x:Name="eDescricao"></Entry>
+
+        <Button x:Name="BntCadastro" Text="Cadastra" Clicked="BntCadastro_OnClicked"></Button>
       
     </StackLayout>
 

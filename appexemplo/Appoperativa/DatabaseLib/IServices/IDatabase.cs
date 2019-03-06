@@ -12,5 +12,6 @@ namespace DatabaseLib.IServices
         void Deletar(int Id);
         void Update(Produto p);
         Produto Carregar(int Id);
+        void CriarBanco();
     }
 }

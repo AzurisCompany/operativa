@@ -1,4 +1,5 @@
 ﻿using System;
+using DatabaseLib.IServices;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -17,6 +18,11 @@ namespace Appoperativa
         protected override void OnStart()
         {
             // Handle when your app starts
+            // Criacao do banco 
+            var db = DependencyService.Get<IDatabase>();
+           db.CriarBanco();
+
+
         }
 
         protected override void OnSleep()
