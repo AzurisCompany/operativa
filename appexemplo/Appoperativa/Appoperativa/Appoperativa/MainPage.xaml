@@ -12,6 +12,7 @@
 
         <Button x:Name="BntCadastro" Text="Cadastra" Clicked="BntCadastro_OnClicked"></Button>
       
+         <ListView x:Name="listaprodutos"></ListView>
     </StackLayout>
 
 </ContentPage>

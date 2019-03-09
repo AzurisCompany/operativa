@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using DatabaseLib.IServices;
 using DatabaseLib.Model;
 using DatabaseLibORM.Model;
+using WebServerLib;
 using Xamarin.Forms;
 
 namespace Appoperativa
@@ -16,6 +17,8 @@ namespace Appoperativa
         public MainPage()
         {
             InitializeComponent();
+            ProdutoWS pws = new ProdutoWS();
+           // listaprodutos.ItemsSource = pws.Listar();
         }
 
         private void BntCadastro_OnClicked(object sender, EventArgs e)

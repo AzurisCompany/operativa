@@ -17,5 +17,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\DatabaseLibORM\DatabaseLibORM.csproj" />
     <ProjectReference Include="..\..\DatabaseLib\DatabaseLib.csproj" />
+    <ProjectReference Include="..\..\WebServerLib\WebServerLib.csproj" />
   </ItemGroup>
 </Project>
